@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!--<PublishAot>true</PublishAot>-->
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UseWindowsForms>True</UseWindowsForms>
+	<Authors>Thomas Mathieson</Authors>
+	<Description>A fast O3D file viewer.</Description>
+	<Copyright>Copyright Thomas Mathieson 2024</Copyright>
+	<PackageProjectUrl>https://github.com/space928/O3DEncrypt</PackageProjectUrl>
+	<Version>1.2.5</Version>
+	<ApplicationIcon>O3DIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <!--<DefineConstants>$(DefineConstants);ALLOW_DECRYPTION</DefineConstants>-->
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <!--<DefineConstants>$(DefineConstants);ALLOW_DECRYPTION</DefineConstants>-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="main_frag.glsl" />
+    <None Remove="main_vert.glsl" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="O3DIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="main_frag.glsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_vert.glsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Silk.NET.Input" Version="2.20.0" />
+    <PackageReference Include="Silk.NET.OpenGL" Version="2.20.0" />
+    <PackageReference Include="Silk.NET.OpenGL.Extensions.ImGui" Version="2.20.0" />
+    <PackageReference Include="StbImageSharp" Version="2.27.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\O3DParse\O3DParse.csproj" />
+  </ItemGroup>
+
+</Project>

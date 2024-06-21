@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>O3DParse</Title>
+    <Authors>Thomas Mathieson</Authors>
+    <Description>A pure C# library for reading and writing O3D files.</Description>
+    <Copyright>Copyright Thomas Mathieson 2024</Copyright>
+    <PackageProjectUrl>https://github.com/space928/O3DEncrypt</PackageProjectUrl>
+	<Version>1.4.1</Version>
+	<IncludeSymbols>True</IncludeSymbols>
+	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <IsAotCompatible>False</IsAotCompatible>
+    <IsTrimmable>False</IsTrimmable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsAotCompatible>False</IsAotCompatible>
+    <IsTrimmable>False</IsTrimmable>
+  </PropertyGroup>
+
+</Project>

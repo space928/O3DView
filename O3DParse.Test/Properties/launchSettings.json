@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "O3DParse.Test": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Program Files\\OMSI 2\\Vehicles\\GPM_C2\\Model\\modeldata_C2_NGT_V3.cfg\""
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "O3DView": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
